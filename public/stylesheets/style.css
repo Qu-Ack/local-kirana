@@ -1,8 +1,6 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
+.wrapper .get_elements {
+  display:flex;
+  list-style: none;
+  gap:24px;
+  font-size: 16px;
 }

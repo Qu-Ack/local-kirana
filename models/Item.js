@@ -12,7 +12,7 @@ const itemSchema = new Schema({
 
 
 itemSchema.virtual('url').get(function() {
-    return `/items/${this._id}`
+    return `/shop/items/${this._id}`
 })
 
 

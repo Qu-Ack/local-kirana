@@ -11,7 +11,7 @@ const categorySchema = new Schema({
 
 categorySchema.virtual('url').get(function()
 {
-    return `/category/${this._id}`;
+    return `/shop/categories/${this._id}`;
 })
 
 
