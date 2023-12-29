@@ -1,0 +1,32 @@
+extends layout 
+
+
+
+
+block content 
+
+    h1=title 
+    form(action="/shop/create/item" method="post")
+        label(for="name") Item Name 
+        input(type="text" id="name" name="name" placeholder="please enter the item name")
+        label(for="price") Item Price 
+        input(type="number" name="price" id="price" placeholder="MRP")
+        label(for="desc") Item Description 
+        textarea(name="desc" id="desc" cols="30" rows="10")
+        label(for="number_in_stock") Item stock 
+        input(type="number" name="number_in_stock" id="number_in_stock" placeholder="stock?")
+        select(name="category")
+            option(value="") --Please Select a Category--
+            for category in categories 
+                if prod 
+                    if category._id.toString() === prod.category._id.toString()
+                        option(value=category._id selected)  #{category.name}
+                    else 
+                        option(value=category._id) #{category.name}         
+                else 
+                    option(value=category._id) #{category.name} 
+        button(type="submit") Submit 
+        if errors 
+            ul 
+                for error in errors 
+                    li= error.msg

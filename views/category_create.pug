@@ -1,0 +1,14 @@
+extends layout 
+
+block content 
+    h1=title 
+    form(action="/shop/create/category" method="POST")
+        label(for="name") Category's Name 
+        input(type="text" name="name" id="name" required)
+        label(for="desc") Category's Description 
+        textarea(name="desc" id="desc" cols="30", rows="10")
+        button(type="submit") Submit   
+    if errors 
+        ul 
+            for error in errors 
+                li= error.msg 

@@ -19,3 +19,11 @@
   list-style: none;
   gap:32px;
 }
+
+
+form{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
